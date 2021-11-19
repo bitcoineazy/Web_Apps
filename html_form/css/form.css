@@ -1,0 +1,31 @@
+.form_example {
+    width: 500px;
+    height: 500px;
+    background: aquamarine;
+    position: center;
+    text-align: center;
+    font-family: Ubuntu, serif;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.form_table {
+    width: 400px;
+    height: 400px;
+    border-radius: 30px;
+}
+
+.submit_button {
+    background: ghostwhite;
+    border-radius: 20px;
+    color: teal;
+    text-align: center;
+    width: 160px;
+}
+
+.form_legend {
+    background: white;
+    color: teal;
+    border-radius: 30px;
+    width: 200px;
+}
