@@ -1,0 +1,15 @@
+.button{
+    background: aquamarine;
+    width: 500px;
+    height: 300px;
+    font-family: Ubuntu, serif;
+    border: #4d2020;
+}
+.button_2{
+    background: aquamarine;
+    font-family: Ubuntu, serif;
+}
+.button_3{
+    background: aquamarine;
+    font-family: Ubuntu, serif;
+}

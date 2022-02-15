@@ -2,10 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <link href="buttons.css" rel="stylesheet" />
     <title>React</title>
 </head>
 <body>
-    <div id="like_button_container" data-commendid="1"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js"></script>
+    <div class="button" id="welcome_example">
+        <script type="text/babel" datatype="module">
+            ReactDOM.render(
+                <div><h3>Привет!</h3></div>,
+                document.getElementById("welcome_example")
+            )
+        </script>
+    </div>
+    <div id="counter_button_container" data-commentid="1"></div>
+    <div class="button_2" id="like_button_container_1" data-commentid="2"></div>
+    <div class="button_3" id="like_button_container_2" data-commentid="3"></div>
+    <div class="image_1" id="image" data-commentid="4"></div>
+
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="like_button.js"></script>
