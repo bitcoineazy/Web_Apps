@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Переменные, типы данных</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.6.4/math.js"></script>
+  </head>
+  <body>
+    <script>
+      let x = prompt("Введите первое число:");
+      let operation = prompt("Выберите операцию: (+, -, /, *)");
+      let y = prompt("Введите второе число:");
+      let result = math.evaluate(x+operation+y)
+      alert("Результат: " + result)
+      let value = prompt("Загадайте число и умножьте его на 2 затем прибавьте 7:")
+      alert("Вы загадали число: " + ((value - 7) / 2))
+      let name = prompt("Введите имя:")
+      let birth_year = prompt("Введите год рождения:")
+      document.write(name + ": " + (2021 - birth_year))
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Методы объекта</title>
+</head>
+<body>
+    <script>
+        let prospect_info = {
+            name: "Kevin",
+            surname: "Smith",
+            age: "26",
+            gender: "male",
+            interests: "sports"
+        }
+
+        console.log(prospect_info.name, prospect_info.surname, prospect_info.age)
+
+        function User(name) {
+            this.name = name;
+            this.isAdmin = false;
+        }
+        let user = new User("Вася")
+        alert(user.name)
+        alert(user.isAdmin)
+
+        function Student() {
+            this.name = "Петя"
+            this.age = 19
+            this.doJob = function () {
+                return "Привет, я " + this.name + ", мне " + this.age + " лет."
+            }
+        }
+        let new_student = new Student()
+        alert(new_student.doJob())
+
+    </script>
+</body>
+</html>

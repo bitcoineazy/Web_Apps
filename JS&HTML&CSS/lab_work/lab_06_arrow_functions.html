@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Стрелочные функции</title>
+</head>
+<body>
+<script>
+
+  function calculator_arrow(a, b) {
+    if (!a || !b) return
+
+    let sum = (a, b) => a + b
+    let diff = (a, b) => a - b
+    let multiply = (a, b) => a * b
+    let divide = (a, b) => a / b
+
+    alert("5 + 5 = " + sum(a, b))
+    alert("5 - 2 = " + diff(a, b))
+    alert("5 * 5 = " + multiply(a, b))
+    alert("5 / 2.5 = " + divide(a, b))
+  }
+  calculator_arrow()
+
+  function palindrome_arrow(string) {
+    if (!string) return
+
+    let palindrome = (string) => string.split("").reverse().join("")
+    alert("Палиндром Туголуков: " + palindrome(string))
+  }
+
+  palindrome_arrow("Туголуков")
+
+  // Вычисление среднего значения в массиве
+  function mean_arrow(array) {
+    if (!array) return
+    let mean_array = (array) => {
+      let sum = 0
+      for (let i = 0; i < array.length; i++) {
+        sum += array[i]
+      }
+      return sum / array.length
+    }
+    alert("Среднее из массива - " + array + ": " + mean_array(array))
+  }
+
+  mean_arrow([1, 2, 3, 4])
+
+  // Кол-во дней до нового года
+  function new_year_arrow(time) {
+    if (!time) return
+
+    let new_year = (time) => (365 - time)
+    alert("Кол-во дней до Нового года: " + new_year(time))
+  }
+  new_year_arrow()
+
+  // undefined
+  function undefined_arrow() {
+    let undefined_val = () => undefined
+    alert(undefined_val())
+  }
+
+  undefined_arrow()
+
+
+  class ArrowArray {
+    constructor(array) {
+      this.array = array
+    }
+
+    sumAll() {
+      let sum_all = (array) => {
+        let sum = 0
+        for (let i = 0; i < array.length; i++) {
+          sum += array[i]
+        }
+        return sum
+      }
+      alert(sum_all(this.array))
+    }
+
+    findEven() {
+      let even_numbers = (array) => {
+        let even_array = []
+        for (let z = 0; z < array.length; z++) {
+          if (!(array[z] % 2)) {
+            even_array.push(array[z])
+          }
+        }
+        return even_array
+      }
+      alert(even_numbers(this.array))
+    }
+
+    multiplyEach() {
+      let multiply_array = (array) => {
+        for (let i = 0; i < array.length; i++) {
+          array[i] = array[i] * 2
+        }
+        return array
+      }
+      alert(multiply_array(this.array))
+    }
+  }
+
+  let our_array = new ArrowArray([1, 2, 3, 4, 5, 6])
+  our_array.sumAll()
+  our_array.findEven()
+  our_array.multiplyEach()
+
+</script>
+</body>
+</html>

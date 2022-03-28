@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Массивы</title>
+</head>
+<body>
+    <script>
+        function showMessage() {
+            let message = "Привет, я JavaScript!" // локальная переменная
+            alert( message );
+        }
+        showMessage(); // Привет, я JavaScript!
+        //alert(message); // -- будет ошибка, т.к. переменная видна только внутри функции
+
+        let array = []
+        for (let i = 0; i <= 15; i++) {
+            array.push(Math.round(Math.random() * (1000 - -1000) + -1000)) //случайное между 1000 и -1000
+        }
+        console.log(array)
+        for (let z = 0; z <= 15; z++) {
+            if (array[z] < 0) {
+                array[z] = array[z] ** 2
+            }
+        }
+        console.log(array)
+    </script>
+</body>
+</html>

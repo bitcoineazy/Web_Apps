@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Классы</title>
+</head>
+<body>
+    <script>
+        class User {
+            constructor(name) {
+                this.name = name
+            }
+
+            nameOutput() {
+                alert(this.name)
+            }
+        }
+
+        let random_user = new User("Иван")
+        random_user.nameOutput()
+
+        class Clock {
+            constructor(template) {
+                this.template = template
+                this.timer_id = 0
+            }
+
+            render() {
+                let date = new Date()
+
+                let hours = date.getHours()
+                if (hours < 10) {
+                    hours = '0' + hours
+                }
+
+                let minutes = date.getMinutes()
+                if (minutes < 10) {
+                    minutes = '0' + minutes
+                }
+
+                let seconds = date.getSeconds()
+                if (seconds < 10) {
+                    seconds = '0' + seconds
+                }
+
+                let output = this.template
+                    .replace('h', hours)
+                    .replace('m', minutes)
+                    .replace('s', seconds)
+
+                console.log(output)
+            }
+
+            start() {
+                this.render()
+                //Назначаем id таймера, чтобы потом выключить clearInterval
+                this.timer_id = setInterval(this.render, 1000)
+                //this.timer_id = setInterval(() => alert("Hello"), 1000)
+            }
+
+            stop() {
+                clearInterval(this.timer_id)
+            }
+        }
+        let clock = new Clock(template="h:m:s")
+        clock.start()
+
+        class Flipper {
+            constructor(name) {
+                this.name = name;
+            }
+
+            reverseName() {
+                return this.name.split('').reverse().join('')
+            }
+        }
+
+        let name_flipper = new Flipper("Матвей")
+        alert(name_flipper.reverseName())
+        palindrome = name_flipper.reverseName()
+        if ("Матвей" === palindrome) {
+            alert("Палиндром")
+        }
+
+    </script>
+</body>
+</html>

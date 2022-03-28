@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Симулятор стрелочная функция</title>
+</head>
+<body>
+<script>
+    class RandomSimulator {
+        constructor() {
+            this.array = []
+        }
+
+        // Сгенерировать в массив рандомные значения (0, 1, 2)
+        generateValues() {
+            let generate_values = (array) => {
+                let counter = 0
+                let amounts = {
+                    zero: 0,
+                    one: 0,
+                    two: 0
+                }
+                while (counter < 1000000) {
+                    array[counter] = Math.round(Math.random() * 2)
+                    switch (array[counter]) {
+                        case (0):
+                            amounts.zero += 1
+                            break
+                        case (1):
+                            amounts.one += 1
+                            break
+                        case (2):
+                            amounts.two += 1
+                            break
+                    }
+                    counter += 1
+                }
+                alert("Кол-во повторений: 0) " + amounts.zero + " 1) " + amounts.one + " 2) " + amounts.two)
+            }
+        generate_values(this.array)
+        // alert(generate_values(this.array))
+        }
+    }
+
+    let simulator = new RandomSimulator()
+    simulator.generateValues()
+</script>
+</body>
+</html>
